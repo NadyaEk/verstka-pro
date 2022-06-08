@@ -1,0 +1,464 @@
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Lato', sans-serif
+    font-style: normal
+
+a
+    text-decoration: none
+
+span
+    color: #F16D7F
+
+img
+    max-width: 100%
+
+.center
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
+
+.header
+    background: #222222
+    min-height: 75px
+    display: flex
+    align-content: center
+    justify-content: space-between
+    align-items: center
+    &__left
+        display: flex
+        gap: 40px
+        align-items: baseline
+    &__right
+        position: relative
+        display: flex
+        gap: 32px
+
+/* 
+
+    &__menu
+        position: absolute
+        top: 76px
+        right: 232px
+        display: none
+
+
+    &__link_menu
+        display: inline-block
+
+.header__link_menu:hover
+.header__menu
+    display: block
+    display: flex
+    flex-direction: column
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    background-color: #fff
+    color:#6F6E6E
+.promo
+    background: #F1E4E6
+    padding-left: calc(50% - 800px)
+    padding-right: calc(50% - 800px)
+    display: flex
+    &__right
+        padding-left: 64px
+    &__img
+        width: 50%
+    &__info
+        border-left: 12px solid #F16D7F
+        margin-top: 48%
+        padding-left: 16px
+    &__title
+        font-weight: 900
+        font-size: 48px
+        line-height: 58px
+        color: #222222
+    &__heading
+        font-weight: 700
+        font-size: 32px
+        line-height: 39px
+        color: #222222
+
+.sale
+    margin-top: 64px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 30px
+    &__item
+        position: relative
+        min-height: 250px
+    &__item_big
+        min-height: 180px
+        grid-column: 1 / -1
+    &__content
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        opacity: 0.7
+    &__content:hover
+        opacity: 1
+    &__text
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        color: #FFFFFF
+    &__heading
+        font-weight: 700
+        font-size: 24px
+        line-height: 29px
+        color: #F16D7F
+
+.product-box
+    display: flex
+    flex-direction: column
+    margin-top: 96px
+
+.product-box__text,
+.product__text
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: #5D5D5D
+
+.product-box__title
+    font-weight: 400
+    font-size: 30px
+    line-height: 36px
+    color: #222222
+    text-align: center
+
+.product-box__text_big
+    font-weight: 400
+    text-align: center
+
+.product__text_hover
+    color: #FFFFFF
+    padding-left: 12px
+
+.product
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr))
+    gap: 30px
+    margin-top: 48px
+    justify-items: center
+
+
+    &__item
+        background-color: #F8F8F8
+        max-width: 360px
+
+
+    &__img
+        position: relative
+
+
+    &__img_hover
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        display: none
+        background: rgba(58, 56, 56, 0.86)
+        opacity: 0.86
+        z-index: 3
+
+.product__img:hover .product__img_hover,
+.product__button
+    display: block
+
+
+    &
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        display: flex
+        align-content: center
+        align-items: center
+        justify-content: center
+
+.product__link_cart
+    display: block
+    display: flex
+    align-items: center
+    border: 1px solid #FFFFFF
+    padding: 12px
+
+
+    &:hover
+        box-shadow: 0 0 5px #ffffff
+
+.product__info
+    margin-top: 25px
+    padding: 16px
+
+.product__heading
+    font-weight: 400
+    font-size: 13px
+    line-height: 16px
+    color: #000000
+    padding-bottom: 16px
+
+.product__price
+    font-weight: 400
+    font-size: 16px
+    line-height: 19px
+    color: #F16D7F
+    padding-top: 16px
+
+.product__all
+    font-weight: 400
+    font-size: 16px
+    line-height: 19px
+    color: #F26376
+    padding: 16px 40px
+    margin-top: 48px
+    border: 1px solid #F26376
+    margin-bottom: 96px
+
+
+    &:hover
+        color: #FFFFFF
+        background-color: #F26376
+
+.quality
+    background-color: #222224
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    align-content: space-around
+    align-items: center
+    gap: 30px
+    min-height: 340px
+
+
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        align-content: center
+
+
+    &__title
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        color: #FBFBFB
+        margin-top: 28px
+        margin-bottom: 16px
+
+
+    &__text
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #FBFBFB
+        padding: 0 30px
+        text-align: center
+
+
+    &__link:hover
+        opacity: 0.7
+
+.sub
+    background: url(img/subscribe.jpeg)
+    background-repeat: no-repeat
+    background-size: cover
+    min-height: 448px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-content: center
+    align-items: center
+
+
+    &__left
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-right: 20%
+
+
+    &__right
+        display: flex
+        flex-direction: column
+        padding: 0 10%
+
+
+    &__text
+        font-weight: 400
+        font-size: 20px
+        line-height: 24px
+        text-align: center
+        color: #222224
+        margin-top: 30px
+
+
+    &__title
+        font-weight: 700
+        font-size: 24px
+        line-height: 40px
+        text-align: center
+        color: #222224
+
+
+    &__heading
+        font-weight: 400
+        font-size: 18px
+        line-height: 30px
+        text-align: center
+        color: #222224
+        margin-bottom: 32px
+
+
+    &__form
+        display: flex
+        justify-content: center
+        align-items: stretch
+        height: 48px
+
+
+    &__email
+        background-color: #E1E1E1
+        border-radius: 50px 0 0 50px
+        border: 0px
+        font-weight: 400
+        font-size: 14px
+        color: #222224
+        opacity: 0.67
+        padding: 8px 64px 8px 20px
+
+
+    &__subcribe
+        background-color: #F26376
+        padding: 16px
+        border: 0px
+        border-radius: 0 50px 50px 0
+        font-weight: 400
+        font-size: 14px
+        color: #FFFFFF
+
+
+    &__subcribe:hover
+        opacity: 0.7
+
+.footer
+    min-height: 80px
+    background: #222224
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+    &__left
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        color: #FBFBFB
+
+
+    &__social
+        display: flex
+        gap: 8px
+
+
+    &__link
+        color: #000000
+        background-color: #FFFFFF
+        display: flex
+        align-items: center
+        width: 32px
+        height: 32px
+        justify-content: center
+
+
+    &__link:hover
+        color: #FFFFFF
+        background-color: #F26376
+
+.fa-facebook:before
+    content: "\f39e"
+
+.fa-instagram:before
+    content: "\f16d"
+
+.fa-pinterest-p:before
+    content: "\f231"
+
+.fa-facebook:before
+    content: "\f099"
+
+.arrivals
+    background-color: #F8F3F4
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-height: 148px
+
+
+    &__title
+        font-weight: 400
+        font-size: 24px
+        line-height: 29px
+        color: #F16D7F
+
+
+    &__menu
+        list-style-type: none
+        display: flex
+
+
+    &__list::before
+        content: "/"
+        color: #636363
+
+
+    &__list:first-child::before
+        content: none
+
+
+    &__link
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #636363
+        padding: 4px
+
+
+    &__list:last-child .arrivals__link
+        font-weight: 700
+        color: #F16D7F
+
+.filter__left_filter
+    font-weight: 600
+    font-size: 14px
+    line-height: 17px
+    color: #000000
+
+    // width: 530px;
+    // background-color: #FFFFFF
+    // position: absolute
+    // top: 50px 
+
+details
+    position: relative
+    background-color: #FFFFFF
+    width: 360px
+
+details[open]>summary 
+    background-color: #FFFFFF
+    color: #F16D7F
+
+summary
+    display: block
+
+summary::-webkit-details-marker
+    display: none
