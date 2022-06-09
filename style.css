@@ -54,7 +54,6 @@ img {
         right: 232px
         display: none
 
-
     &__link_menu
         display: inline-block */
 .header__menu {
@@ -152,9 +151,12 @@ img {
 }
 
 .product-box {
-  display: flex;
-  flex-direction: column;
   margin-top: 96px;
+}
+
+.product-box__button {
+  display: flex;
+  justify-content: center;
 }
 
 .product-box__text,
