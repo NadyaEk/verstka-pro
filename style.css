@@ -519,7 +519,7 @@ ul {
   width: 330px;
   background-color: #ffffff;
   z-index: 3;
-  padding: 16px 16px 0;
+  padding: 12px 16px 0;
 }
 
 .filter__menu {
@@ -552,22 +552,42 @@ ul {
 
 .trending {
   position: absolute;
-  top: 50px;
+  top: 52px;
   background-color: #ffffff;
   z-index: 3;
 }
 
 .size {
   position: absolute;
-  top: 50px;
+  top: 52px;
   left: 160px;
   background-color: #ffffff;
   z-index: 3;
 }
 
+.size__list {
+  padding: 10px 0 10px 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6F6E6E;
+  display: flex;
+  align-items: center;
+}
+
+.size__menu {
+  width: 80px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  margin-top: 5px;
+}
+
+.size__input {
+  margin-right: 9px;
+}
+
 .price {
   position: absolute;
-  top: 50px;
+  top: 52px;
   left: 238px;
   background-color: #ffffff;
   z-index: 3;
