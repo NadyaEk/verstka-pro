@@ -434,3 +434,27 @@ summary
 
 summary::-webkit-details-marker
     display: none
+.page
+    margin-top: 48px
+    margin-bottom: 96px
+    display: flex
+    justify-content: center
+    &__menu
+        padding: 12px 16px
+        list-style-type: none
+        display: flex
+        gap: 16px
+        border: 1px solid #EBEBEB
+    &__link
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: #EBEBEB
+        &_active
+            color: #F16D7F
+
+    &__list:first-child &__link
+        color: #000000
+
+    &__list:last-child &__link
+        color: #000000
