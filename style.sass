@@ -1,29 +1,5 @@
-$colorSite: #F16D7F
-$colorText: #222222
-$colorProduct: #F26376
-@mixin flex
-    display: flex
-    align-content: center
-    justify-content: space-between
-    align-items: center
-@mixin flex__colum_center
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
+@import 'vars'
 
-@mixin font($weight , $size , $lh , $color)
-    font-weight: $weight
-    font-size: $size
-    line-height: $lh
-    color: $color
-
-// transform($property) {
-//   -webkit-transform: $property;
-//   -ms-transform: $property;
-//   transform: $property;
-// }
-// .box { @include transform(rotate(30deg)); }
 *
     margin: 0
     padding: 0
@@ -40,12 +16,45 @@ span
 
 img
     max-width: 100%
+
 ul
     list-style-type: none
 
+details[open] > summary
+    color: $colorSite
+    & > .filter__summary::after
+        content: url(img/filter-red.svg)
+
+summary
+    display: block
+    &::-webkit-details-marker
+        display: none
+
 .center
-    padding-left: calc(50% - 570px)
-    padding-right: calc(50% - 570px)
+    padding-left: calc(50% - #{$widthSite / 2})
+    padding-right: calc(50% - #{$widthSite / 2})
+
+.menu
+    @include font(400 , 14px  , 17px , #6F6E6E )
+    background-color: #fff
+    position: absolute
+    top: 54px
+    right: -230px
+    width: 230px
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 32px 0
+    display: flex
+    flex-direction: column
+    &__title
+        @include font(700, 14px, 17px, $colorText)
+        padding: 0 32px
+    &-item__title
+        @include font(700, 14px, 17px, $colorSite)
+        padding: 24px 32px 0
+    &-item__list
+        padding: 12px 54px 0
+    &-item__link:hover
+        color: $colorSite
 
 .header
     background: $colorText
@@ -58,31 +67,17 @@ ul
     &__right
         position: relative
         display: flex
+        align-items: center
         gap: 32px
-
-/* 
-
-    &__menu
-        position: absolute
-        top: 76px
-        right: 232px
-        display: none
-
     &__link_menu
         display: inline-block
-
-.header__link_menu:hover
-.header__menu
-    display: block
-    display: flex
-    flex-direction: column
-    @include font(400 , 14px  , 17px , #6F6E6E )
-    background-color: #fff
+        &:hover .menu__title
+            color: $colorSite
 
 .promo
     background: #F1E4E6
-    padding-left: calc(50% - 800px)
-    padding-right: calc(50% - 800px)
+    padding-left: calc(50% - #{$widthSite / 2 + 230px})
+    padding-right: calc(50% - #{$widthSite / 2 + 230px})
     display: flex
     &__right
         padding-left: 64px
@@ -101,8 +96,8 @@ ul
 .sale
     margin-top: 64px
     display: grid
-    grid-template-columns: repeat(3, 1fr)
-    gap: 30px
+    grid-template-columns: repeat(3, $width3)
+    gap: $gapGrid
     &__item
         position: relative
         min-height: 250px
@@ -124,34 +119,28 @@ ul
     &__heading
         @include font(700 , 24px , 29px , $colorSite )
 
-.product-box
-    margin-top: 96px
-
-.product-box__button
-    display: flex
-    justify-content: center
-.product-box__text,
-.product__text
-    @include font(300 , 14px , 17px , #5D5D5D)
-
-.product-box__title
-    @include font(400, 30px, 36px, $colorText)
-    text-align: center
-
-.product-box__text_big
-    font-weight: 400
-    text-align: center
-
-.product__text_hover
-    color: #FFFFFF
-    padding-left: 12px
-
 .product
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr))
-    gap: 30px
+    grid-template-columns: repeat(auto-fit, minmax($width3, 1fr))
+    gap: $gapGrid
     margin-top: 48px
     justify-items: center
+    &-box
+        margin-top: 96px
+        &__button
+            display: flex
+            justify-content: center
+        &__text
+            @include font(300 , 14px , 17px , #5D5D5D)
+        &__title
+            @include font(400, 30px, 36px, $colorText)
+            text-align: center
+        &__text_big
+            font-weight: 400
+            text-align: center
+        &__text_hover
+            color: #FFFFFF
+            padding-left: 12px
 
     &__item
         background-color: #F8F8F8
@@ -159,7 +148,15 @@ ul
 
     &__img
         position: relative
-
+        &:hover &_hover,
+        .product__button
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            @include flex
+            justify-content: center
     &__img_hover
         position: absolute
         width: 100%
@@ -170,56 +167,39 @@ ul
         background: rgba(58, 56, 56, 0.86)
         opacity: 0.86
         z-index: 3
+    &__text
+        @include font(300 , 14px , 17px , #5D5D5D)
+        &_hover
+            color: #ffffff
+            padding-left: 12px
+    &__info
+        margin-top: 25px
+        padding: 16px
+    &__heading
+        @include font(400, 13px, 16px, #000)
+        padding-bottom: 16px
+        &:hover
+            color: $colorSite
+    &__price
+        @include font(400, 16px, 19px, $colorSite )
+        padding-top: 16px
+    &__all
+        @include font(400, 16px, 19px, $colorProduct )
+        padding: 16px 40px
+        margin-top: 48px
+        border: 1px solid $colorProduct
+        margin-bottom: 96px
+        &:hover
+            color: #FFFFFF
+            background-color: $colorProduct
+    &__link_cart
+        display: flex
+        align-items: center
+        border: 1px solid #FFFFFF
+        padding: 12px
 
-.product__img:hover .product__img_hover,
-.product__button
-    display: block
-
-    &
-        position: absolute
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-        @include flex
-
-        // display: flex
-        // align-content: center
-        // align-items: center
-        justify-content: center
-
-.product__link_cart
-    display: block
-    display: flex
-    align-items: center
-    border: 1px solid #FFFFFF
-    padding: 12px
-
-    &:hover
-        box-shadow: 0 0 5px #ffffff
-
-.product__info
-    margin-top: 25px
-    padding: 16px
-
-.product__heading
-    @include font(400, 13px, 16px, #000)
-    padding-bottom: 16px
-
-.product__price
-    @include font(400, 16px, 19px, $colorSite )
-    padding-top: 16px
-
-.product__all
-    @include font(400, 16px, 19px, $colorProduct )
-    padding: 16px 40px
-    margin-top: 48px
-    border: 1px solid $colorProduct
-    margin-bottom: 96px
-
-    &:hover
-        color: #FFFFFF
-        background-color: $colorProduct
+        &:hover
+            box-shadow: 0 0 5px #ffffff
 
 .quality
     background-color: #222224
@@ -227,7 +207,7 @@ ul
     grid-template-columns: repeat(3, 1fr)
     align-content: space-around
     align-items: center
-    gap: 30px
+    gap: $gapGrid
     min-height: 340px
 
     &__item
@@ -334,38 +314,30 @@ ul
         color: #FFFFFF
         background-color: $colorProduct
 
-.fa-facebook:before
-    content: "\f39e"
-
-.fa-instagram:before
-    content: "\f16d"
-
-.fa-pinterest-p:before
-    content: "\f231"
-
-.fa-facebook:before
-    content: "\f099"
+.fa
+    &-facebook:before
+        content: "\f39e"
+    &-instagram:before
+        content: "\f16d"
+    &-pinterest-p:before
+        content: "\f231"
+    &-twitter:before
+        content: "\f099"
 
 .arrivals
     background-color: #F8F3F4
-    display: flex
-    align-items: center
-    justify-content: space-between
+    @include flex
     min-height: 148px
 
     &__title
         @include font(400, 24px, 29px, $colorSite )
 
     &__menu
-        list-style-type: none
         display: flex
 
-    &__list::before
+    &__list:not(:first-child)::before
         content: "/"
         color: #636363
-
-    &__list:first-child::before
-        content: none
 
     &__link
         @include font(300, 14px, 17px, #636363 )
@@ -377,55 +349,77 @@ ul
         font-weight: 700
         color: $colorSite
 
-.filter-box
-    display: grid
-    grid-template-columns: 1fr 1fr 1fr
-    gap: 30px
-
-    &__left
-        position: relative
-
-    &__right
-        position: relative
-
 .filter
     position: absolute
-    top: 40px
-    width: 330px
+    width: 100%
     background-color: #ffffff
     z-index: 3
-    padding: 12px 16px 0
-
-    &__menu
-        list-style-type: none
-    &__list
-        padding-left: 10px
+    box-sizing: border-box
+    padding: 12px 16px 12px
+    &[open]
+        padding: 12px 16px 12px
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        & .filter__img path
+            fill: $colorSite
+    &__summary
+        display: flex
+        align-items: center
+        gap: 12px
+        @include font(600, 14px, 17px, #000000)
+        &_in
+            border-left: 5px solid $colorSite
+            padding: 12px
+            border-bottom: 1px solid #EBEBEB
+            @include font(400, 14px, 17px, #6F6E6E )
+    &__content
+        display: flex
+        flex-direction: column
+        gap: 12px
+        padding: 24px 12px 0
     &__link
         @include font(400, 14px, 17px, #6F6E6E )
-        padding: 12px
-        display: block
         &:hover
             color: $colorSite
+    &__category
+        margin-top: 16px
+    &-box
+        position: relative
+        width: $width3
+    &-sorter
+        padding-top: 40px
+        display: flex
+        gap: $gapGrid
+.sorter
+    position: relative
+    padding: 12px 0
+    z-index: 1
+    &-box
+        width: $width3
+        position: relative
+        display: flex
+        gap: 28px
+        align-items: center
     &__summary
-        padding-bottom: 24px
-    &__summary_in
-        border-left: 5px solid $colorSite
-        padding: 12px
-        border-bottom: 1px solid #EBEBEB
-        margin-bottom: 18px
-
-.trending
-    position: absolute
-    top: 52px
-    background-color: #ffffff
-    z-index: 3
+        @include font(400, 14px, 17px, #6F6E6E )
+        display: flex
+        gap: 10px
+        align-items: center
+        &[open] .sorter__img path
+            fill: $colorSite
+    &__content
+        margin-top: 5px
+        position: absolute
+        background-color: white
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        padding-bottom: 16px
+        min-width: 100%
+        z-index: 1
+    &__size
+        position: relative
+    &__price
+        position: relative
 
 .size
-    position: absolute
-    top: 52px
-    left: 160px
-    background-color: #ffffff
-    z-index: 3
     &__list
         padding: 10px 0 10px 10px
         @include font(400, 14px, 16px, #6F6E6E)
@@ -435,31 +429,11 @@ ul
         width: 80px
         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
         margin-top: 5px
+        position: absolute
+        z-index: 1
+        background-color: #ffffff
     &__input
         margin-right: 9px
-
-.price
-    position: absolute
-    top: 52px
-    left: 238px
-    background-color: #ffffff
-    z-index: 3
-
-details[open]>summary 
-    color: $colorSite
-
-summary
-    display: block
-
-summary::-webkit-details-marker
-    display: none
-.filter[open]
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-.filter__summary::after
-    content: url(img/filter.svg)
-
-details[open] > .filter__summary::after
-    content: url(img/filter-red.svg)
 
 .page
     margin-top: 48px
@@ -468,7 +442,6 @@ details[open] > .filter__summary::after
     justify-content: center
     &__menu
         padding: 12px 16px
-        list-style-type: none
         display: flex
         gap: 16px
         border: 1px solid #EBEBEB
