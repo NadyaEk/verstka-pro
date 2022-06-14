@@ -127,6 +127,9 @@ summary
     justify-items: center
     &-box
         margin-top: 96px
+        &_single
+            margin: 128px 0
+            box-sizing: border-box
         &__button
             display: flex
             justify-content: center
@@ -141,11 +144,9 @@ summary
         &__text_hover
             color: #FFFFFF
             padding-left: 12px
-
     &__item
         background-color: #F8F8F8
         max-width: 360px
-
     &__img
         position: relative
         &:hover &_hover,
@@ -209,20 +210,16 @@ summary
     align-items: center
     gap: $gapGrid
     min-height: 340px
-
     &__item
         @include flex__colum_center
-
     &__title
         @include font(400, 20px, 24px, #FBFBFB )
         margin-top: 28px
         margin-bottom: 16px
-
     &__text
         @include font(300, 14px, 17px, #FBFBFB)
         padding: 0 30px
         text-align: center
-
     &__link:hover
         opacity: 0.7
 
@@ -235,38 +232,31 @@ summary
     grid-template-columns: 1fr 1fr
     align-content: center
     align-items: center
-
     &__left
         display: flex
         flex-direction: column
         align-items: center
         padding-right: 20%
-
     &__right
         display: flex
         flex-direction: column
         padding: 0 10%
-
     &__text
         @include font(400, 20px, 24px, #222224 )
         text-align: center
         margin-top: 30px
-
     &__title
         @include font(700, 24px, 40px, #222224)
         text-align: center
-
     &__heading
         @include font(400, 18px, 30px, #222224)
         text-align: center
         margin-bottom: 32px
-
     &__form
         display: flex
         justify-content: center
         align-items: stretch
         height: 48px
-
     &__email
         background-color: #E1E1E1
         border-radius: 50px 0 0 50px
@@ -276,7 +266,6 @@ summary
         color: #222224
         opacity: 0.67
         padding: 8px 64px 8px 20px
-
     &__subcribe
         background-color: $colorProduct
         padding: 16px
@@ -285,7 +274,6 @@ summary
         font-weight: 400
         font-size: 14px
         color: #FFFFFF
-
     &__subcribe:hover
         opacity: 0.7
 
@@ -349,6 +337,76 @@ summary
         font-weight: 700
         color: $colorSite
 
+.single
+    padding-left: calc(50% - #{$widthSite / 2 + 230px})
+    padding-right: calc(50% - #{$widthSite / 2 + 230px})
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    &__foto
+        display: flex
+        background: #F7F7F7
+        padding-top: 11px
+        padding-bottom: 42px
+        width: 100%
+        justify-content: center
+    &-box
+        width: $widthSite
+        margin-top: -64px
+        background-color: #FFFFFF
+        z-index: 1
+        display: flex
+        flex-direction: column
+        align-items: center
+        border: 1px solid $colorBorder
+        padding: 64px 0
+    &__info
+        width: 640px
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 0 42px
+        border-bottom: 1px solid $colorBorder
+    &__title
+        padding-bottom: 12px
+        @include font(300, 14px, 27px, $colorSite)
+    &__heading
+        padding-top: 12px
+        padding-bottom: 48px
+        @include font(300, 18px, 22px, #4D4D4D)
+    &__text
+        @include font(300, 14px, 17px, #5E5E5E )
+        text-align: center
+    &__border
+        height: 3px
+        width: 64px
+        background-color: $colorSite
+    &__price
+        @include font(300, 24px, 29px, $colorSite )
+        padding-top: 32px
+        padding-bottom: 64px
+    &__choose
+        padding-top: 64px
+        padding-bottom: 48px
+        display: flex
+        gap: 23px
+    &__summary
+        display: flex
+        align-items: center
+        gap: 9px
+    &__details[open]> .single__summary path
+        fill: &colorSite
+    &__button
+        display: flex
+        align-items: center
+        gap: 23px
+        padding: 14px
+        border: 1px solid $colorSite
+        @include font(400, 16px, 19px, $colorSite )
+        &:hover
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
 .filter
     position: absolute
     width: 100%
@@ -389,6 +447,7 @@ summary
         padding-top: 40px
         display: flex
         gap: $gapGrid
+
 .sorter
     position: relative
     padding: 12px 0
