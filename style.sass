@@ -1,0 +1,522 @@
+@import 'vars'
+
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Lato', sans-serif
+    font-style: normal
+
+a
+    text-decoration: none
+
+span
+    color: $colorSite
+
+img
+    max-width: 100%
+
+ul
+    list-style-type: none
+
+details[open] > summary
+    color: $colorSite
+    & > .filter__summary::after
+        content: url(img/filter-red.svg)
+
+summary
+    display: block
+    &::-webkit-details-marker
+        display: none
+
+.center
+    padding-left: calc(50% - #{$widthSite / 2})
+    padding-right: calc(50% - #{$widthSite / 2})
+
+.menu
+    @include font(400 , 14px  , 17px , #6F6E6E )
+    background-color: #fff
+    position: absolute
+    top: 54px
+    right: -230px
+    width: 230px
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    padding: 32px 0
+    display: flex
+    flex-direction: column
+    &__title
+        @include font(700, 14px, 17px, $colorText)
+        padding: 0 32px
+    &-item__title
+        @include font(700, 14px, 17px, $colorSite)
+        padding: 24px 32px 0
+    &-item__list
+        padding: 12px 54px 0
+    &-item__link:hover
+        color: $colorSite
+
+.header
+    background: $colorText
+    min-height: 75px
+    @include flex
+    &__left
+        display: flex
+        gap: 40px
+        align-items: baseline
+    &__right
+        position: relative
+        display: flex
+        align-items: center
+        gap: 32px
+    &__link_menu
+        display: inline-block
+        &:hover .menu__title
+            color: $colorSite
+
+.promo
+    background: #F1E4E6
+    padding-left: calc(50% - #{$widthSite / 2 + 230px})
+    padding-right: calc(50% - #{$widthSite / 2 + 230px})
+    display: flex
+    &__right
+        padding-left: 64px
+    &__img
+        width: 50%
+    &__info
+        border-left: 12px solid $colorSite
+        margin-top: 48%
+        padding-left: 16px
+    &__title
+        @include font(900 , 48px , 58px , $colorText )
+
+    &__heading
+        @include font(700 , 32px , 39px , $colorText )
+
+.sale
+    margin-top: 64px
+    display: grid
+    grid-template-columns: repeat(3, $width3)
+    gap: $gapGrid
+    &__item
+        position: relative
+        min-height: 250px
+    &__item_big
+        min-height: 180px
+        grid-column: 1 / -1
+    &__content
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        @include flex__colum_center
+        opacity: 0.7
+    &__content:hover
+        opacity: 1
+    &__text
+        @include font(400, 16px, 19px , #FFFFFF )
+    &__heading
+        @include font(700 , 24px , 29px , $colorSite )
+
+.product
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax($width3, 1fr))
+    gap: $gapGrid
+    margin-top: 48px
+    justify-items: center
+    &-box
+        margin-top: 96px
+        &_single
+            margin: 128px 0
+            box-sizing: border-box
+        &__button
+            display: flex
+            justify-content: center
+        &__text
+            @include font(300 , 14px , 17px , #5D5D5D)
+        &__title
+            @include font(400, 30px, 36px, $colorText)
+            text-align: center
+        &__text_big
+            font-weight: 400
+            text-align: center
+        &__text_hover
+            color: #FFFFFF
+            padding-left: 12px
+    &__item
+        background-color: #F8F8F8
+        max-width: 360px
+    &__img
+        position: relative
+        &:hover &_hover,
+        .product__button
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            @include flex
+            justify-content: center
+    &__img_hover
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        display: none
+        background: rgba(58, 56, 56, 0.86)
+        opacity: 0.86
+        z-index: 3
+    &__text
+        @include font(300 , 14px , 17px , #5D5D5D)
+        &_hover
+            color: #ffffff
+            padding-left: 12px
+    &__info
+        margin-top: 25px
+        padding: 16px
+    &__heading
+        @include font(400, 13px, 16px, #000)
+        padding-bottom: 16px
+        &:hover
+            color: $colorSite
+    &__price
+        @include font(400, 16px, 19px, $colorSite )
+        padding-top: 16px
+    &__all
+        @include font(400, 16px, 19px, $colorProduct )
+        padding: 16px 40px
+        margin-top: 48px
+        border: 1px solid $colorProduct
+        margin-bottom: 96px
+        &:hover
+            color: #FFFFFF
+            background-color: $colorProduct
+    &__link_cart
+        display: flex
+        align-items: center
+        border: 1px solid #FFFFFF
+        padding: 12px
+
+        &:hover
+            box-shadow: 0 0 5px #ffffff
+
+.quality
+    background-color: #222224
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    align-content: space-around
+    align-items: center
+    gap: $gapGrid
+    min-height: 340px
+    &__item
+        @include flex__colum_center
+    &__title
+        @include font(400, 20px, 24px, #FBFBFB )
+        margin-top: 28px
+        margin-bottom: 16px
+    &__text
+        @include font(300, 14px, 17px, #FBFBFB)
+        padding: 0 30px
+        text-align: center
+    &__link:hover
+        opacity: 0.7
+
+.sub
+    background: url(img/subscribe.jpeg)
+    background-repeat: no-repeat
+    background-size: cover
+    min-height: 448px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-content: center
+    align-items: center
+    &__left
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-right: 20%
+    &__right
+        display: flex
+        flex-direction: column
+        padding: 0 10%
+    &__text
+        @include font(400, 20px, 24px, #222224 )
+        text-align: center
+        margin-top: 30px
+    &__title
+        @include font(700, 24px, 40px, #222224)
+        text-align: center
+    &__heading
+        @include font(400, 18px, 30px, #222224)
+        text-align: center
+        margin-bottom: 32px
+    &__form
+        display: flex
+        justify-content: center
+        align-items: stretch
+        height: 48px
+    &__email
+        background-color: #E1E1E1
+        border-radius: 50px 0 0 50px
+        border: 0px
+        font-weight: 400
+        font-size: 14px
+        color: #222224
+        opacity: 0.67
+        padding: 8px 64px 8px 20px
+    &__subcribe
+        background-color: $colorProduct
+        padding: 16px
+        border: 0px
+        border-radius: 0 50px 50px 0
+        font-weight: 400
+        font-size: 14px
+        color: #FFFFFF
+    &__subcribe:hover
+        opacity: 0.7
+
+.footer
+    min-height: 80px
+    background: #222224
+    @include flex
+
+    &__left
+        @include font(400, 16px, 19px, #FBFBFB )
+
+    &__social
+        display: flex
+        gap: 8px
+
+    &__link
+        color: #000000
+        background-color: #FFFFFF
+        display: flex
+        align-items: center
+        width: 32px
+        height: 32px
+        justify-content: center
+
+    &__link:hover
+        color: #FFFFFF
+        background-color: $colorProduct
+
+.fa
+    &-facebook:before
+        content: "\f39e"
+    &-instagram:before
+        content: "\f16d"
+    &-pinterest-p:before
+        content: "\f231"
+    &-twitter:before
+        content: "\f099"
+
+.arrivals
+    background-color: #F8F3F4
+    @include flex
+    min-height: 148px
+
+    &__title
+        @include font(400, 24px, 29px, $colorSite )
+
+    &__menu
+        display: flex
+
+    &__list:not(:first-child)::before
+        content: "/"
+        color: #636363
+
+    &__link
+        @include font(300, 14px, 17px, #636363 )
+        padding: 4px
+        &:hover
+            color: $colorSite
+
+    &__list:last-child .arrivals__link
+        font-weight: 700
+        color: $colorSite
+
+.single
+    padding-left: calc(50% - #{$widthSite / 2 + 230px})
+    padding-right: calc(50% - #{$widthSite / 2 + 230px})
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    &__foto
+        display: flex
+        background: #F7F7F7
+        padding-top: 11px
+        padding-bottom: 42px
+        width: 100%
+        justify-content: center
+    &-box
+        width: $widthSite
+        margin-top: -64px
+        background-color: #FFFFFF
+        z-index: 1
+        display: flex
+        flex-direction: column
+        align-items: center
+        border: 1px solid $colorBorder
+        padding: 64px 0
+    &__info
+        width: 640px
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 0 42px
+        border-bottom: 1px solid $colorBorder
+    &__title
+        padding-bottom: 12px
+        @include font(300, 14px, 27px, $colorSite)
+    &__heading
+        padding-top: 12px
+        padding-bottom: 48px
+        @include font(300, 18px, 22px, #4D4D4D)
+    &__text
+        @include font(300, 14px, 17px, #5E5E5E )
+        text-align: center
+    &__border
+        height: 3px
+        width: 64px
+        background-color: $colorSite
+    &__price
+        @include font(300, 24px, 29px, $colorSite )
+        padding-top: 32px
+        padding-bottom: 64px
+    &__choose
+        padding-top: 64px
+        padding-bottom: 48px
+        display: flex
+        gap: 23px
+    &__summary
+        display: flex
+        align-items: center
+        gap: 9px
+    &__details[open]> .single__summary path
+        fill: &colorSite
+    &__button
+        display: flex
+        align-items: center
+        gap: 23px
+        padding: 14px
+        border: 1px solid $colorSite
+        @include font(400, 16px, 19px, $colorSite )
+        &:hover
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+.filter
+    position: absolute
+    width: 100%
+    background-color: #ffffff
+    z-index: 3
+    box-sizing: border-box
+    padding: 12px 16px 12px
+    &[open]
+        padding: 12px 16px 12px
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        & .filter__img path
+            fill: $colorSite
+    &__summary
+        display: flex
+        align-items: center
+        gap: 12px
+        @include font(600, 14px, 17px, #000000)
+        &_in
+            border-left: 5px solid $colorSite
+            padding: 12px
+            border-bottom: 1px solid #EBEBEB
+            @include font(400, 14px, 17px, #6F6E6E )
+    &__content
+        display: flex
+        flex-direction: column
+        gap: 12px
+        padding: 24px 12px 0
+    &__link
+        @include font(400, 14px, 17px, #6F6E6E )
+        &:hover
+            color: $colorSite
+    &__category
+        margin-top: 16px
+    &-box
+        position: relative
+        width: $width3
+    &-sorter
+        padding-top: 40px
+        display: flex
+        gap: $gapGrid
+
+.sorter
+    position: relative
+    padding: 12px 0
+    z-index: 1
+    &-box
+        width: $width3
+        position: relative
+        display: flex
+        gap: 28px
+        align-items: center
+    &__summary
+        @include font(400, 14px, 17px, #6F6E6E )
+        display: flex
+        gap: 10px
+        align-items: center
+        &[open] .sorter__img path
+            fill: $colorSite
+    &__content
+        margin-top: 5px
+        position: absolute
+        background-color: white
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        padding-bottom: 16px
+        min-width: 100%
+        z-index: 1
+    &__size
+        position: relative
+    &__price
+        position: relative
+
+.size
+    &__list
+        padding: 10px 0 10px 10px
+        @include font(400, 14px, 16px, #6F6E6E)
+        display: flex
+        align-items: center
+    &__menu
+        width: 80px
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+        margin-top: 5px
+        position: absolute
+        z-index: 1
+        background-color: #ffffff
+    &__input
+        margin-right: 9px
+
+.page
+    margin-top: 48px
+    margin-bottom: 96px
+    display: flex
+    justify-content: center
+    &__menu
+        padding: 12px 16px
+        display: flex
+        gap: 16px
+        border: 1px solid #EBEBEB
+    &__link
+        @include font(300, 16px, 19px, #EBEBEB )
+        &:hover
+            color: $colorSite
+        &_active
+            color: $colorSite
+
+    &__list:first-child &__link
+        color: #000000
+        &:hover
+            color: $colorSite
+
+    &__list:last-child &__link
+        color: #000000
+        &:hover
+            color: $colorSite
