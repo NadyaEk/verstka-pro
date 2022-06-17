@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0fdcecd516.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header center">
+        <nav class="header__left">
+            <a href="index.html" class="header__link">
+                <img src="img/logo.png" alt="logo" class="img__logo">
+            </a>
+            <a href="#" class="header__link">
+                <img src="img/search.svg" alt="search">
+            </a>
+        </nav>
+        <nav class="header__right">
+            <details>
+                <summary><img src="img/menu.svg" alt="menu"></summary>
+                <div class="menu">
+                    <a href="catalog.html" class="header__link_menu">
+                        <h4 class="menu__title">MENU</h4>
+                    </a>
+                    <div class="menu__content">
+                        <h4 class="menu-item__title">MEN</h4>
+                        <ul class="menu-item">
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">Accessories</a></li>
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">Bags</a></li>
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">Denim</a></li>
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">T-Shirts</a></li>
+                        </ul>
+                        <h4 class="menu-item__title">WOMEN</h4>
+                        <ul class="menu-item">
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">Accessories</a></li>
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">Bags</a></li>
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">Denim</a></li>
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">T-Shirts</a></li>
+                        </ul>
+                        <h4 class="menu-item__title">KIDS</h4>
+                        <ul class="menu-item">
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">Accessories</a></li>
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">Bags</a></li>
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">Denim</a></li>
+                            <li class="menu-item__list"><a href="#" class="menu-item__link">T-Shirts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+            <a href="registration.html" class="header__link">
+                <img src="img/reg.svg" alt="registration">
+            </a>
+            <a href="cart.html" class="header__link">
+                <img src="img/cart.svg" alt="cart">
+            </a>
+        </nav>
+    </header>
+    <nav class="arrivals center">
+        <h2 class="arrivals__title">SHOPPING CART </h2>
+    </nav>
+    <section class="cart__shopping center">
+        <div class="cart">
+            <div class="cart__item">
+                <div class="cart__img">
+                    <img class="cart__product" src="img/prod3.jpeg" alt="product">
+                </div>
+                <div class="cart__info">
+                    <a href="single.html" class="cart__single">
+                        MANGO PEOPLE <br> T-SHIRT
+                    </a>
+                    <div class="cart__content">
+                        <p class="cart__text">Price: <span>$300</span></p>
+                        <p class="cart__text">Color: Red</p>
+                        <p class="cart__text">Size: Xl </p>
+                        <p class="cart__text">Quantity:
+                            <input class="cart__quantity" type="number" min="1" max="5" name="quantity" value="2"
+                                id="#">
+                        </p>
+                    </div>
+                </div>
+                <div class="cart__del">
+                    <a href="#">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+                                fill="#575757" />
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+            <div class="cart__item">
+                <div class="cart__img">
+                    <img class="cart__product" src="img/prod7.jpeg" alt="product">
+                </div>
+                <div class="cart__info">
+                    <a href="single.html" class="cart__single">
+                        MANGO PEOPLE <br> T-SHIRT
+                    </a>
+                    <div class="cart__content">
+                        <p class="cart__text">Price: <span>$300</span></p>
+                        <p class="cart__text">Color: Red</p>
+                        <p class="cart__text">Size: Xl </p>
+                        <p class="cart__text">Quantity:
+                            <input class="cart__quantity" type="number" min="1" max="5" name="quantity" value="2"
+                                id="#">
+                        </p>
+                    </div>
+
+                </div>
+                <div class="cart__del">
+                    <a href="#">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+                                fill="#575757" />
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+            <div class="cart__button">
+                <a href="#" class="cart__link">
+                    CLEAR SHOPPING CART
+                </a>
+                <a href="#" class="cart__link">
+                    CONTINUE SHOPPING
+                </a>
+            </div>
+        </div>
+        <div class="shipping">
+            <form class="shipping__address">
+                <h3 class="shipping__title">SHIPPING ADRESS</h3>
+                <input class="shipping__input" type="text" placeholder="Bangladesh">
+                <input class="shipping__input" type="text" placeholder="State">
+                <input class="shipping__input" type="text" placeholder="Postcode / Zip">
+                <input class="shipping__input shipping__submit" type="submit" value="GET A QUOTE">
+            </form>
+            <div class="shipping__checkout">
+                <div class="shipping__total">
+                    <h4 class="shipping__text">SUB TOTAL <span class="shipping__price">$900</span></h4>
+                    <h3 class="shipping__title">GRAND TOTAL <span class="shipping__price_total">$900</span></h3>
+                </div>
+                <a href="#" class="shipping__link">
+                    PROCEED TO CHECKOUT
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="sub center">
+        <div class="sub__left">
+            <img src="img/sub_foto.png" alt="subscribe foto">
+            <h4 class="sub__text">
+                “Vestibulum quis porttitor dui! Quisque viverra nunc mi, <i>a pulvinar purus condimentum“</i>
+            </h4>
+        </div>
+        <div class="sub__right">
+            <h2 class="sub__title">SUBSCRIBE</h2>
+            <h3 class="sub__heading">
+                FOR OUR NEWLETTER AND PROMOTION</h3>
+            <form class="sub__form" action="#" method="post">
+                <input class="sub__email" type="email" name="email" placeholder="Enter Your Email">
+                <input class="sub__subcribe" type="submit" value="Subscribe">
+            </form>
+        </div>
+    </section>
+    <footer class="footer center">
+        <p class="footer__left">&copy; 2021 Brand All Rights Reserved.</p>
+        <div class="footer__social">
+            <a href="#" class="footer__link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="footer__link"><i class="fa fa-instagram" aria-hidden="true"></i></i></a>
+            <a href="www.pinterest.com" class="footer__link"><i class="fa fa-pinterest-p"
+                    aria-hidden="true"></i></i></a>
+            <a href="#" class="footer__link"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
