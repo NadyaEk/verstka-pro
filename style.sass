@@ -531,6 +531,7 @@ input::-webkit-input-placeholder
             box-shadow: 0px 0px 25px rgb(0 0 0 / 21%)
             background-color: #fff
             color: $colorSite
+
 .loyalty
     @include font(300, 24px, 29px, #222222 )
     &__title
@@ -547,6 +548,7 @@ input::-webkit-input-placeholder
         gap: 23px
     &__list::before
         content: url(img/check.svg)
+
 .single
     padding-left: calc(50% - #{$widthSite / 2 + 230px})
     padding-right: calc(50% - #{$widthSite / 2 + 230px})
@@ -555,12 +557,16 @@ input::-webkit-input-placeholder
     flex-direction: column
     align-items: center
     &__foto
+        position: relative
         display: flex
         background: #F7F7F7
         padding-top: 11px
         padding-bottom: 42px
         width: 100%
+        justify-items: center
         justify-content: center
+        align-items: center
+    
     &-box
         width: $widthSite
         margin-top: -64px
@@ -616,6 +622,28 @@ input::-webkit-input-placeholder
         @include font(400, 16px, 19px, $colorSite )
         &:hover
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+.pagination
+    width: 47px
+    height: 47px
+    background: rgba(42, 42, 42, 0.15)
+    display: block
+    &__left
+        position: absolute
+        left: 0
+        display: flex
+        align-items: center 
+        justify-content: center
+        &:hover path
+            fill: $colorSite
+    &__right
+        position: absolute
+        right: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        &:hover path
+            fill: $colorSite
 
 .filter
     position: absolute

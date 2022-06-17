@@ -807,12 +807,15 @@ input::-webkit-input-placeholder {
   align-items: center;
 }
 .single__foto {
+  position: relative;
   display: flex;
   background: #F7F7F7;
   padding-top: 11px;
   padding-bottom: 42px;
   width: 100%;
+  justify-items: center;
   justify-content: center;
+  align-items: center;
 }
 .single-box {
   width: 1140px;
@@ -895,6 +898,33 @@ input::-webkit-input-placeholder {
 }
 .single__button:hover {
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.pagination {
+  width: 47px;
+  height: 47px;
+  background: rgba(42, 42, 42, 0.15);
+  display: block;
+}
+.pagination__left {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination__left:hover path {
+  fill: #F16D7F;
+}
+.pagination__right {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination__right:hover path {
+  fill: #F16D7F;
 }
 
 .filter {
