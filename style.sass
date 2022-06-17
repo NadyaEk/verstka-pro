@@ -480,6 +480,73 @@ input::-webkit-input-placeholder
             color: $colorSite
             background: #FFFFFF
 
+.registration
+    margin: 64px 0 96px
+    display: grid
+    grid-template-columns: 4fr 7fr
+    gap: 128px
+    &__name
+        display: flex
+        flex-direction: column
+        gap: 21px
+    &__radio-box
+        display: flex
+        gap: 10px
+        margin: 32px 0
+        align-items: center
+    &__login
+        display: flex
+        flex-direction: column
+        gap: 21px
+    &__input
+        border: 1px solid #A4A4A4
+        padding: 14px 16px
+        @include font(300, 13px, 16px, #4A4A4A )
+        transition: all 0.2s
+        &:hover
+            border-color: $colorSite
+        &:focus
+            outline: none
+    &__title
+        @include font(300, 16px, 19px, #222222 )
+        display: flex
+        gap: 20px
+    &__radio 
+        width: 17px
+        height: 17px
+        border-radius: 50%
+        border: 1px solid #A4A4A4
+    &__label    
+        @include font(300, 11px, 13px, #222222 )
+    &__text
+        @include font(300, 11px, 13px, #B1B1B1 )
+        margin: 15px 0 39px
+    &__submit
+        width: 50%
+        background: #F16D7F
+        transition: all 0.2s
+        color: #fff
+        padding: 16px 30px
+        &:hover
+            box-shadow: 0px 0px 25px rgb(0 0 0 / 21%)
+            background-color: #fff
+            color: $colorSite
+.loyalty
+    @include font(300, 24px, 29px, #222222 )
+    &__title
+        @include font(300, 24px, 29px, #222222 )
+    &__text
+        margin: 21px 0
+    &__menu
+        display: flex
+        flex-direction: column
+        gap: 16px 24px
+    &__list
+        @include font(300, 24px, 29px, #222222 )
+        display: flex
+        gap: 23px
+    &__list::before
+        content: url(img/check.svg)
 .single
     padding-left: calc(50% - #{$widthSite / 2 + 230px})
     padding-right: calc(50% - #{$widthSite / 2 + 230px})
@@ -653,7 +720,8 @@ input::-webkit-input-placeholder
             color: $colorSite
         &_active
             color: $colorSite
-
+    &__list:hover
+        transform: scale(1.5)
     &__list:first-child &__link
         color: #000000
         &:hover

@@ -689,6 +689,115 @@ input::-webkit-input-placeholder {
   background: #FFFFFF;
 }
 
+.registration {
+  margin: 64px 0 96px;
+  display: grid;
+  grid-template-columns: 4fr 7fr;
+  gap: 128px;
+}
+.registration__name {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.registration__radio-box {
+  display: flex;
+  gap: 10px;
+  margin: 32px 0;
+  align-items: center;
+}
+.registration__login {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.registration__input {
+  border: 1px solid #A4A4A4;
+  padding: 14px 16px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #4A4A4A;
+  transition: all 0.2s;
+}
+.registration__input:hover {
+  border-color: #F16D7F;
+}
+.registration__input:focus {
+  outline: none;
+}
+.registration__title {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  display: flex;
+  gap: 20px;
+}
+.registration__radio {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1px solid #A4A4A4;
+}
+.registration__label {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #222222;
+}
+.registration__text {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #B1B1B1;
+  margin: 15px 0 39px;
+}
+.registration__submit {
+  width: 50%;
+  background: #F16D7F;
+  transition: all 0.2s;
+  color: #fff;
+  padding: 16px 30px;
+}
+.registration__submit:hover {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.21);
+  background-color: #fff;
+  color: #F16D7F;
+}
+
+.loyalty {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+}
+.loyalty__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+}
+.loyalty__text {
+  margin: 21px 0;
+}
+.loyalty__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 24px;
+}
+.loyalty__list {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  display: flex;
+  gap: 23px;
+}
+.loyalty__list::before {
+  content: url(img/check.svg);
+}
+
 .single {
   padding-left: calc(50% - 800px);
   padding-right: calc(50% - 800px);
@@ -933,6 +1042,9 @@ input::-webkit-input-placeholder {
 }
 .page__link_active {
   color: #F16D7F;
+}
+.page__list:hover {
+  transform: scale(1.5);
 }
 .page__list:first-child .page__link {
   color: #000000;
