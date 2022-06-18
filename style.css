@@ -61,6 +61,7 @@ input::-webkit-input-placeholder {
   padding: 32px 0;
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 .menu__title {
   font-weight: 700;
@@ -111,8 +112,8 @@ input::-webkit-input-placeholder {
 
 .promo {
   background: #F1E4E6;
-  padding-left: calc(50% - 800px);
-  padding-right: calc(50% - 800px);
+  padding-left: calc(50% - 1255px);
+  padding-right: calc(50% - 1255px);
   display: flex;
 }
 .promo__right {
@@ -799,8 +800,8 @@ input::-webkit-input-placeholder {
 }
 
 .single {
-  padding-left: calc(50% - 800px);
-  padding-right: calc(50% - 800px);
+  padding-left: calc(50% - 570px + 230px);
+  padding-right: calc(50% - 570px + 230px);
   display: flex;
   justify-content: center;
   flex-direction: column;

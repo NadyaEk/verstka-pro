@@ -34,8 +34,8 @@ input::-webkit-input-placeholder
         color: #B1B1B1
 
 .center
-    padding-left: calc(50% - #{$widthSite / 2})
-    padding-right: calc(50% - #{$widthSite / 2})
+    padding-left: calc(50% - calc($widthSite / 2))
+    padding-right: calc(50% - calc($widthSite / 2))
 
 .menu
     @include font(400 , 14px  , 17px , #6F6E6E )
@@ -48,6 +48,7 @@ input::-webkit-input-placeholder
     padding: 32px 0
     display: flex
     flex-direction: column
+    z-index: 2
     &__title
         @include font(700, 14px, 17px, $colorText)
         padding: 0 32px
@@ -79,8 +80,8 @@ input::-webkit-input-placeholder
 
 .promo
     background: #F1E4E6
-    padding-left: calc(50% - #{$widthSite / 2 + 230px})
-    padding-right: calc(50% - #{$widthSite / 2 + 230px})
+    padding-left: calc(50% - calc($widthSite + 230px / 2))
+    padding-right: calc(50% - calc($widthSite + 230px / 2))
     display: flex
     &__right
         padding-left: 64px
@@ -550,8 +551,8 @@ input::-webkit-input-placeholder
         content: url(img/check.svg)
 
 .single
-    padding-left: calc(50% - #{$widthSite / 2 + 230px})
-    padding-right: calc(50% - #{$widthSite / 2 + 230px})
+    padding-left: calc(50% - calc($widthSite / 2) + 230px)
+    padding-right: calc(50% - calc($widthSite / 2) + 230px)
     display: flex
     justify-content: center
     flex-direction: column
