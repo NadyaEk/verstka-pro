@@ -543,7 +543,7 @@ input::-webkit-input-placeholder
     &__menu
         display: flex
         flex-direction: column
-        gap: 16px 24px
+        gap: 16px
     &__list
         @include font(300, 24px, 29px, #222222 )
         display: flex
@@ -769,7 +769,9 @@ input::-webkit-input-placeholder
     .header
         padding: 0 32px
     .menu
-        right: -32px    
+        right: -32px   
+    .arrivals
+        padding: 0 16px 
     .promo 
         padding-left: calc(50% - calc($widthSite/2))
         padding-right: calc(50% - calc($widthSite/2))
@@ -808,3 +810,39 @@ input::-webkit-input-placeholder
             padding: 54px 204px 0
     .footer
         padding: 0 32px
+    .registration
+        padding: 0 16px
+        grid-template-columns: 1fr 1fr
+        gap: 22px
+        margin-top: 40px
+    .loyalty
+        font-size: 16px
+        line-height: 19px
+        &__list
+            font-size: 16px
+            line-height: 19px
+        &__title
+            font-size: 16px
+            line-height: 19px
+        &__text
+            margin: 32px 0 22px
+    .cart
+        &__shopping
+            grid-template-columns: 1fr
+            gap: 64px
+            padding: 0 16px
+        &__button
+            padding-top: 62px
+            gap: 50px
+            justify-content: center
+    .shipping
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 16px
+            margin-bottom: 128px
+            align-items: center
+            &__checkout
+                margin-top: 0
+            &__address
+                padding-top: 0
+

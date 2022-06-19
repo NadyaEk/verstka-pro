@@ -785,7 +785,7 @@ input::-webkit-input-placeholder {
 .loyalty__menu {
   display: flex;
   flex-direction: column;
-  gap: 16px 24px;
+  gap: 16px;
 }
 .loyalty__list {
   font-weight: 300;
@@ -1099,6 +1099,10 @@ input::-webkit-input-placeholder {
     right: -32px;
   }
 
+  .arrivals {
+    padding: 0 16px;
+  }
+
   .promo {
     padding-left: calc(50% - 367px);
     padding-right: calc(50% - 367px);
@@ -1154,5 +1158,53 @@ input::-webkit-input-placeholder {
 
   .footer {
     padding: 0 32px;
+  }
+
+  .registration {
+    padding: 0 16px;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 40px;
+  }
+
+  .loyalty {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .loyalty__list {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .loyalty__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .loyalty__text {
+    margin: 32px 0 22px;
+  }
+
+  .cart__shopping {
+    grid-template-columns: 1fr;
+    gap: 64px;
+    padding: 0 16px;
+  }
+  .cart__button {
+    padding-top: 62px;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  .shipping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 128px;
+    align-items: center;
+  }
+  .shipping__checkout {
+    margin-top: 0;
+  }
+  .shipping__address {
+    padding-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
