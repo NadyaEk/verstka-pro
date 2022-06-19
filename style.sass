@@ -9,6 +9,7 @@ body
     font-style: normal
 
 a
+    display: block
     text-decoration: none
 
 span
@@ -80,8 +81,8 @@ input::-webkit-input-placeholder
 
 .promo
     background: #F1E4E6
-    padding-left: calc(50% - calc($widthSite + 230px / 2))
-    padding-right: calc(50% - calc($widthSite + 230px / 2))
+    padding-left: calc(50% - calc(($widthSite + 230px) / 2))
+    padding-right: calc(50% - calc(($widthSite + 230px) / 2))
     display: flex
     &__right
         padding-left: 64px
@@ -100,11 +101,11 @@ input::-webkit-input-placeholder
 .sale
     margin-top: 64px
     display: grid
-    grid-template-columns: repeat(3, $width3)
+    grid-template-columns: repeat(3, 1fr)
     gap: $gapGrid
     &__item
         position: relative
-        min-height: 250px
+        // min-height: 250px
     &__item_big
         min-height: 180px
         grid-column: 1 / -1
@@ -760,3 +761,50 @@ input::-webkit-input-placeholder
         color: #000000
         &:hover
             color: $colorSite
+
+    // Медиа-запросы
+
+@media (max-width: 1024px)
+    $widthSite: 734px
+    .header
+        padding: 0 32px
+    .menu
+        right: -32px    
+    .promo 
+        padding-left: calc(50% - calc($widthSite/2))
+        padding-right: calc(50% - calc($widthSite/2))
+        &__right
+            padding-left: 40px
+            display: flex
+            align-items: center
+        &__info
+            margin-top: 0
+        &__title
+            font-size: 44px
+            line-height: 53px
+        &__heading
+            font-size: 24px
+            line-height: 29px
+    .sale
+        padding: 0 16px
+        gap: 20px
+        &__item_big 
+            min-height: 116px
+    .product
+        padding: 0 16px
+        gap: 16px
+        &__all
+            margin-top: 32px
+            margin-bottom: 64px
+    .quality
+        grid-template-columns: 1fr
+        gap: 48px
+        padding: 48px 204px
+    .sub
+        grid-template-columns: 1fr
+        gap: 48px
+        padding-bottom: 140px
+        &__left
+            padding: 54px 204px 0
+    .footer
+        padding: 0 32px
