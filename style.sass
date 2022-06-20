@@ -764,6 +764,10 @@ input::-webkit-input-placeholder
 
     // Медиа-запросы
 
+@media (max-width: 1139px)
+    .product__item:nth-child(odd):last-child
+        display: none
+
 @media (max-width: 1024px)
     $widthSite: 734px
     .header
@@ -845,7 +849,66 @@ input::-webkit-input-placeholder
                 margin-top: 0
             &__address
                 padding-top: 0
-@media (max-width: 1139px)
-    .product__item:nth-child(odd):last-child
-        display: none
 
+@media (max-width: 655px)
+    .header
+        padding: 0 16px
+        &__right .header__link 
+            display: none
+    
+    .promo
+        display: flex
+        justify-content: center
+        min-height: 363px
+        &__right
+            padding-left: 0
+        &__img
+            display: none
+        &__title
+            font-size: 38px
+            line-height: 46px
+        &__heading
+            font-size: 20px
+            line-height: 24px
+    .sale
+        gap: 32px
+        display: flex
+        flex-direction: column
+        align-items: center
+        &__item_big a img
+            min-height: 111px
+    .product
+        justify-content: center
+        &__box
+            margin-top: 64px
+    .quality
+        padding: 48px 0
+        justify-items: center
+        &__link
+            max-width: 347px
+    .sub
+        justify-items: center
+        padding-top: 54px
+        padding-bottom: 109px
+        &__text
+            font-size: 19px
+            line-height: 22px
+        &__title
+            font-size: 24px
+            line-height: 37px
+        &__heading
+            font-size: 14px
+            line-height: 21px
+        &__left
+            max-width: 343px
+            padding: 0
+        &__right
+            padding: 0
+    .footer
+        flex-direction: column-reverse
+        gap: 40px
+        padding: 43px 0 9px
+
+
+
+    
