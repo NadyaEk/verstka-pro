@@ -81,6 +81,12 @@ input::-webkit-input-placeholder {
 .menu-item__list {
   padding: 12px 54px 0;
 }
+.menu-item__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+}
 .menu-item__link:hover {
   color: #F16D7F;
 }
@@ -509,13 +515,13 @@ input::-webkit-input-placeholder {
   gap: 128px;
 }
 .cart__img {
-  width: 262px;
-  height: 306px;
+  max-width: 262px;
+  max-height: 306px;
 }
 .cart__product {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .cart__item {
   position: relative;
@@ -557,9 +563,8 @@ input::-webkit-input-placeholder {
   gap: 16px;
 }
 .cart__quantity {
-  padding: 0 10px 0 16px;
+  padding: 0 10px;
   border: 1px solid #EAEAEA;
-  text-align: right;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -1270,6 +1275,7 @@ input::-webkit-input-placeholder {
     justify-items: center;
     padding-top: 54px;
     padding-bottom: 109px;
+    box-sizing: border-box;
   }
   .sub__text {
     font-size: 19px;
@@ -1295,5 +1301,65 @@ input::-webkit-input-placeholder {
     flex-direction: column-reverse;
     gap: 40px;
     padding: 43px 0 9px;
+  }
+
+  .arrivals {
+    justify-content: center;
+  }
+
+  .cart {
+    gap: 32px;
+  }
+  .cart__shopping {
+    gap: 48px;
+    margin-top: 39px;
+    padding: 0 8px;
+  }
+  .cart__item {
+    grid-template-columns: 40% 60%;
+    gap: 17px;
+    min-height: 188px;
+  }
+  .cart__info {
+    padding: 13px 0 38px;
+    gap: 16px;
+  }
+  .cart__single {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .cart__text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .cart__quantity {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .cart__del {
+    top: 17px;
+    right: 12px;
+    flex-direction: row;
+    width: 10px;
+    height: 10px;
+  }
+  .cart__del svg {
+    width: 10px;
+    height: 10px;
+  }
+  .cart__button {
+    gap: 10px;
+    padding-top: 0px;
+  }
+  .cart__link {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 8px 17px;
+  }
+
+  .shipping {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 96px;
   }
 }/*# sourceMappingURL=style.css.map */

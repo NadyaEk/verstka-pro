@@ -58,8 +58,10 @@ input::-webkit-input-placeholder
         padding: 24px 32px 0
     &-item__list
         padding: 12px 54px 0
-    &-item__link:hover
-        color: $colorSite
+    &-item__link
+        @include font(400, 14px, 17px, #6F6E6E)
+        &:hover
+            color: $colorSite
 
 .header
     background: $colorText
@@ -353,12 +355,12 @@ input::-webkit-input-placeholder
         padding-bottom: 128px
         gap: 128px
     &__img
-        width: 262px
-        height: 306px
+        max-width: 262px
+        max-height: 306px
     &__product
         width: 100%
         height: 100%
-        object-fit: contain
+        object-fit: cover
     &__item
         position: relative
         display: grid
@@ -387,9 +389,9 @@ input::-webkit-input-placeholder
         align-items: baseline
         gap: 16px
     &__quantity
-        padding: 0 10px 0 16px
+        padding: 0 10px
         border: 1px solid #EAEAEA
-        text-align: right
+        // text-align: right
         @include font(400, 18px, 22px, #656565 )
     &__button
         display: flex 
@@ -890,6 +892,7 @@ input::-webkit-input-placeholder
         justify-items: center
         padding-top: 54px
         padding-bottom: 109px
+        box-sizing: border-box
         &__text
             font-size: 19px
             line-height: 22px
@@ -908,7 +911,50 @@ input::-webkit-input-placeholder
         flex-direction: column-reverse
         gap: 40px
         padding: 43px 0 9px
-
+    .arrivals
+        justify-content: center
+    .cart
+        gap: 32px
+        &__shopping
+            gap: 48px
+            margin-top: 39px
+            padding: 0 8px
+        &__item
+            grid-template-columns: 40% 60%
+            gap: 17px
+            min-height: 188px
+        &__info
+            padding: 13px 0 38px
+            gap: 16px
+        &__single
+            font-size: 16px
+            line-height: 19px
+        &__text
+            font-size: 14px
+            line-height: 17px
+        &__quantity
+            font-size: 10px
+            line-height: 12px
+        &__del
+            top: 17px
+            right: 12px
+            flex-direction: row
+            width: 10px
+            height: 10px
+            & svg
+                width: 10px
+                height: 10px
+        &__button
+            gap: 10px
+            padding-top: 0px
+        &__link
+            font-size: 12px
+            line-height: 14px
+            padding: 8px 17px
+    .shipping
+        grid-template-columns: 1fr
+        gap: 48px
+        margin-bottom: 96px
 
 
     
