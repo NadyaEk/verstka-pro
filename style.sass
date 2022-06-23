@@ -582,7 +582,7 @@ input::-webkit-input-placeholder
         border: 1px solid $colorBorder
         padding: 64px 0
     &__info
-        width: 640px
+        max-width: 640px
         display: flex
         flex-direction: column
         align-items: center
@@ -650,13 +650,22 @@ input::-webkit-input-placeholder
             fill: $colorSite
 
 .filter
-    position: absolute
-    width: 100%
     background-color: #ffffff
     z-index: 3
     box-sizing: border-box
     padding: 12px 16px 12px
+    &-sorter
+        padding-top: 40px
+        display: grid
+        grid-template-columns: 1fr 2fr
+        align-items: center
+    &-box
+        position: relative
+        min-width: 360px
     &[open]
+        position: absolute
+        top: -20px
+        min-width: 360px
         padding: 12px 16px 12px
         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
         & .filter__img path
@@ -682,13 +691,6 @@ input::-webkit-input-placeholder
             color: $colorSite
     &__category
         margin-top: 16px
-    &-box
-        position: relative
-        width: $width3
-    &-sorter
-        padding-top: 40px
-        display: flex
-        gap: $gapGrid
 
 .sorter
     position: relative
@@ -816,6 +818,13 @@ input::-webkit-input-placeholder
             padding: 54px 204px 0
     .footer
         padding: 0 32px
+    .filter
+        &-sorter
+            padding: 40px 16px 0
+            justify-content: space-between
+    .sorter
+        &-box
+            justify-content: flex-end
     .registration
         padding: 0 16px
         grid-template-columns: 1fr 1fr
@@ -836,7 +845,7 @@ input::-webkit-input-placeholder
         &__shopping
             grid-template-columns: 1fr
             gap: 64px
-            padding: 0 16px
+            padding: 59px 16px 0
         &__button
             padding-top: 62px
             gap: 50px
@@ -857,7 +866,9 @@ input::-webkit-input-placeholder
         padding: 0 16px
         &__right .header__link 
             display: none
-    
+    .menu
+        width: 100vw
+        right: -16px
     .promo
         display: flex
         justify-content: center
@@ -880,6 +891,7 @@ input::-webkit-input-placeholder
         &__item_big a img
             min-height: 111px
     .product
+        padding: 0 8px
         justify-content: center
         &__box
             margin-top: 64px
@@ -913,6 +925,32 @@ input::-webkit-input-placeholder
         padding: 43px 0 9px
     .arrivals
         justify-content: center
+        display: flex
+        flex-direction: column
+        gap: 32px
+    .filter
+        padding: 0
+        &[open]
+            top: -23px
+            left: -16px
+        &__summary p
+            display: none
+        &__img
+            width: 38px
+            height: 25px
+        &-sorter
+            display: flex
+            padding: 26px 8px 0
+        &-box
+            min-width: 0
+    .sorter
+        &-box
+            gap: 24px
+        &__summary
+            font-size: 12px
+            line-height: 14px
+        &__content
+            right: 0
     .cart
         gap: 32px
         &__shopping
@@ -955,6 +993,30 @@ input::-webkit-input-placeholder
         grid-template-columns: 1fr
         gap: 48px
         margin-bottom: 96px
+    .single
+        &__text
+            line-height: 20px
+        &__price
+            line-height: 31px
+        &__choose
+            padding: 64px 30px
+        &__button
+            padding: 14px 56px
+    .product-catalog
+        margin-top: 32px
+
+@media (max-width: 425px)
+    .filter
+        &[open]
+            min-width: 100vw
+    .product
+        &__item
+            width: 100vw
+            display: flex
+            flex-direction: column
+            align-items: center
+    
+
 
 
     
