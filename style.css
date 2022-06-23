@@ -944,6 +944,7 @@ input::-webkit-input-placeholder {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
+  gap: 30px;
 }
 .filter-box {
   position: relative;
@@ -1175,6 +1176,7 @@ input::-webkit-input-placeholder {
   .filter-sorter {
     padding: 40px 16px 0;
     justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
   }
 
   .sorter-box {
@@ -1227,6 +1229,11 @@ input::-webkit-input-placeholder {
   }
   .shipping__address {
     padding-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .filter-box {
+    min-width: 70px;
   }
 }
 @media (max-width: 655px) {
@@ -1346,7 +1353,7 @@ input::-webkit-input-placeholder {
     padding: 26px 8px 0;
   }
   .filter-box {
-    min-width: 0;
+    min-width: 70px;
   }
 
   .sorter-box {
