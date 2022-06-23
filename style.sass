@@ -21,10 +21,23 @@ img
 ul
     list-style-type: none
 
-details[open] > summary
-    color: $colorSite
-    & > .filter__summary::after
-        content: url(img/filter-red.svg)
+// details
+//     & > summary
+//         border: none
+//         outline: none
+//     [open] > summary
+//         color: $colorSite
+//         & > .filter__summary::after
+//             content: url(img/filter-red.svg)
+details
+    & > summary
+        border: none
+        outline: none
+    &[open] > summary
+        color: $colorSite
+        & > .filter__summary::after
+            content: url(img/filter-red.svg)
+
 
 summary
     display: block
@@ -58,6 +71,7 @@ input::-webkit-input-placeholder
             display: flex
             gap: 10px
             padding: 0 8px
+            height: 50px
     &__title
         @include font(700, 14px, 17px, $colorText)
         padding: 0 32px
