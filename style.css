@@ -708,9 +708,16 @@ input::-webkit-input-placeholder {
 }
 .registration__radio-box {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   margin: 32px 0;
   align-items: center;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+.registration__label {
+  margin-left: -10px;
 }
 .registration__login {
   display: flex;
@@ -754,8 +761,8 @@ input::-webkit-input-placeholder {
 }
 .registration__text {
   font-weight: 300;
-  font-size: 11px;
-  line-height: 13px;
+  font-size: 13px;
+  line-height: 16px;
   color: #B1B1B1;
   margin: 15px 0 39px;
 }
@@ -1283,8 +1290,17 @@ input::-webkit-input-placeholder {
     padding: 0 8px;
     justify-content: center;
   }
-  .product__box {
+  .product-catalog {
+    margin-top: 0;
+  }
+  .product-box {
     margin-top: 64px;
+  }
+  .product-box_catalog {
+    margin-top: 16px;
+  }
+  .product-box_single {
+    margin: 64px 0;
   }
 
   .quality {
@@ -1383,6 +1399,7 @@ input::-webkit-input-placeholder {
   .cart__info {
     padding: 13px 0 38px;
     gap: 16px;
+    max-width: 190px;
   }
   .cart__single {
     font-size: 16px;
@@ -1435,9 +1452,14 @@ input::-webkit-input-placeholder {
   .single__button {
     padding: 14px 56px;
   }
+  .single__summary {
+    font-size: 10px;
+    line-height: 12px;
+  }
 
-  .product-catalog {
-    margin-top: 32px;
+  .registration {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 @media (max-width: 425px) {

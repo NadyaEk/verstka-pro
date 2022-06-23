@@ -495,9 +495,12 @@ input::-webkit-input-placeholder
         gap: 21px
     &__radio-box
         display: flex
-        gap: 10px
+        gap: 20px
         margin: 32px 0
         align-items: center
+        @include font(300, 11px, 13px, #000000 )
+    &__label
+        margin-left: -10px
     &__login
         display: flex
         flex-direction: column
@@ -523,7 +526,7 @@ input::-webkit-input-placeholder
     &__label    
         @include font(300, 11px, 13px, #222222 )
     &__text
-        @include font(300, 11px, 13px, #B1B1B1 )
+        @include font(300, 13px, 16px, #B1B1B1 )
         margin: 15px 0 39px
     &__submit
         width: 50%
@@ -772,7 +775,6 @@ input::-webkit-input-placeholder
 @media (max-width: 1139px)
     .product__item:nth-child(odd):last-child
         display: none
-
 @media (max-width: 1024px)
     $widthSite: 734px
     .header
@@ -898,8 +900,14 @@ input::-webkit-input-placeholder
     .product
         padding: 0 8px
         justify-content: center
-        &__box
+        &-catalog
+            margin-top: 0
+        &-box
             margin-top: 64px
+            &_catalog
+                margin-top: 16px
+            &_single
+                margin: 64px 0
     .quality
         padding: 48px 0
         justify-items: center
@@ -969,6 +977,7 @@ input::-webkit-input-placeholder
         &__info
             padding: 13px 0 38px
             gap: 16px
+            max-width: 190px
         &__single
             font-size: 16px
             line-height: 19px
@@ -1007,9 +1016,12 @@ input::-webkit-input-placeholder
             padding: 64px 30px
         &__button
             padding: 14px 56px
-    .product-catalog
-        margin-top: 32px
-
+        &__summary
+            font-size: 10px
+            line-height: 12px
+    .registration
+        grid-template-columns: 1fr
+        gap: 40px
 @media (max-width: 425px)
     .filter
         &[open]
