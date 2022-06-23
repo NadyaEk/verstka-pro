@@ -659,6 +659,7 @@ input::-webkit-input-placeholder
         display: grid
         grid-template-columns: 1fr 2fr
         align-items: center
+        gap:30px
     &-box
         position: relative
         min-width: 360px
@@ -822,6 +823,7 @@ input::-webkit-input-placeholder
         &-sorter
             padding: 40px 16px 0
             justify-content: space-between
+            grid-template-columns: 1fr 1fr
     .sorter
         &-box
             justify-content: flex-end
@@ -860,7 +862,10 @@ input::-webkit-input-placeholder
                 margin-top: 0
             &__address
                 padding-top: 0
-
+@media (max-width: 768px)
+    .filter
+        &-box
+            min-width: 70px
 @media (max-width: 655px)
     .header
         padding: 0 16px
@@ -942,7 +947,7 @@ input::-webkit-input-placeholder
             display: flex
             padding: 26px 8px 0
         &-box
-            min-width: 0
+            min-width: 70px
     .sorter
         &-box
             gap: 24px
