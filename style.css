@@ -64,6 +64,16 @@ input::-webkit-input-placeholder {
   flex-direction: column;
   z-index: 2;
 }
+.menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__link_mini {
+  display: flex;
+  gap: 10px;
+  padding: 0 8px;
+}
 .menu__title {
   font-weight: 700;
   font-size: 14px;
@@ -115,6 +125,12 @@ input::-webkit-input-placeholder {
 }
 .header__link_menu:hover .menu__title {
   color: #F16D7F;
+}
+.header__link_mini {
+  display: none;
+  padding: 10px;
+  border-radius: 50px 50px;
+  background-color: #ccc;
 }
 
 .promo {
@@ -1250,12 +1266,14 @@ input::-webkit-input-placeholder {
   .header__right .header__link {
     display: none;
   }
+  .header__right .header__link_mini {
+    display: block;
+  }
 
   .menu {
     width: 100vw;
     right: -16px;
   }
-
   .promo {
     display: flex;
     justify-content: center;

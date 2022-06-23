@@ -50,6 +50,14 @@ input::-webkit-input-placeholder
     display: flex
     flex-direction: column
     z-index: 2
+    &__link
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &_mini
+            display: flex
+            gap: 10px
+            padding: 0 8px
     &__title
         @include font(700, 14px, 17px, $colorText)
         padding: 0 32px
@@ -76,10 +84,17 @@ input::-webkit-input-placeholder
         display: flex
         align-items: center
         gap: 32px
-    &__link_menu
-        display: inline-block
-        &:hover .menu__title
-            color: $colorSite
+    &__link
+        &_menu
+            display: inline-block
+            &:hover .menu__title
+                color: $colorSite
+        &_mini
+            display: none
+            padding: 10px
+            border-radius: 50px 50px
+            background-color: #ccc
+    
 
 .promo
     background: #F1E4E6
@@ -873,9 +888,12 @@ input::-webkit-input-placeholder
         padding: 0 16px
         &__right .header__link 
             display: none
+            &_mini
+                display: block
     .menu
         width: 100vw
         right: -16px
+        &
     .promo
         display: flex
         justify-content: center
